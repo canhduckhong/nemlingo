@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Danish Word Translator",
+    "name": "Nemlingo",
     "version": "1.0",
-    "description": "Select a Danish word and learn its meaning and pronunciation using Gemini API.",
+    "description": "Select a Danish word and learn its meaning and pronunciation.",
     "permissions": ["contextMenus", "scripting", "activeTab", "storage"],
     "host_permissions": ["<all_urls>"],
     "background": {
