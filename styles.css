@@ -1,0 +1,72 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 320px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin: 0;
+    border-radius: 8px;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    color: #d00c27; /* Danish flag red color */
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-transform: lowercase;
+    font-weight: 600;
+  }
+  
+  #meaning {
+    margin: 15px 0;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0 5px;
+  }
+  
+  /* Style for pronunciation sections */
+  .pronunciation {
+    color: #666;
+    font-style: italic;
+    margin: 8px 0;
+  }
+  
+  /* Style the audio player */
+  audio {
+    margin-top: 12px;
+    width: 90%;
+    border-radius: 30px;
+  }
+  
+  /* Section for translation part */
+  .translation {
+    font-weight: bold;
+    color: #0f6fc6;
+  }
+  
+  /* Highlight IPA pronunciation */
+  .ipa {
+    background-color: #f0f0f0;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #333;
+  }
+  
+  /* Footer with credit */
+  .footer {
+    font-size: 11px;
+    color: #999;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
