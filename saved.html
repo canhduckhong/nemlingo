@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nemlingo - Saved Translations</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    h1 {
+      font-size: 18px;
+      color: #2c3e50;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    .translation-item {
+      margin-bottom: 16px;
+      padding: 12px;
+      border-radius: 6px;
+      background-color: #f8f9fa;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .word {
+      font-size: 16px;
+      font-weight: bold;
+      color: #1a73e8;
+      margin-bottom: 4px;
+    }
+    .translation {
+      font-size: 14px;
+      margin: 4px 0;
+    }
+    .pronunciation {
+      font-size: 13px;
+      color: #666;
+      font-style: italic;
+      margin: 4px 0;
+    }
+    .definitions {
+      margin-top: 8px;
+      padding-left: 16px;
+    }
+    .definitions li {
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+    .timestamp {
+      font-size: 12px;
+      color: #999;
+      text-align: right;
+      margin-top: 8px;
+    }
+    .no-translations {
+      text-align: center;
+      color: #666;
+      padding: 20px;
+    }
+    .back-button {
+      display: inline-block;
+      margin-bottom: 16px;
+      color: #1a73e8;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <a href="popup.html" class="back-button">← Back to Translator</a>
+  <h1>Saved Translations</h1>
+  <div id="translations-container">
+    <div class="no-translations">Loading your saved translations...</div>
+  </div>
+  <script src="saved.js"></script>
+</body>
+</html>

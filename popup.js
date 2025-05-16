@@ -1,5 +1,40 @@
 // No API key needed for the free Google Translate API
 
+// Function to save translation to local storage
+async function saveTranslation(word, translationData) {
+  try {
+    // Get existing translations from storage
+    const result = await chrome.storage.local.get('savedTranslations');
+    const savedTranslations = result.savedTranslations || [];
+    
+    // Check if this word is already saved
+    const existingIndex = savedTranslations.findIndex(item => item.word === word);
+    
+    // Create a new translation object
+    const translation = {
+      word: word,
+      translation: translationData.translation,
+      pronunciation: translationData.pronunciation,
+      definitions: translationData.definitions,
+      timestamp: new Date().toISOString()
+    };
+    
+    if (existingIndex >= 0) {
+      // Update existing entry
+      savedTranslations[existingIndex] = translation;
+    } else {
+      // Add new entry
+      savedTranslations.push(translation);
+    }
+    
+    // Save back to storage
+    await chrome.storage.local.set({ savedTranslations });
+    console.log('Translation saved to local storage');
+  } catch (error) {
+    console.error('Error saving translation:', error);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   chrome.storage.local.get('selectedWord', async (result) => {
     const selectedWord = result.selectedWord;
@@ -57,6 +92,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         pronunciation: pronunciation,
         definitions: definitions
       };
+      
+      // Save the translation to local storage
+      await saveTranslation(selectedWord, result);
       
       // Format the output to be more readable with HTML
       const formattedResult = formatTranslationResult(result);

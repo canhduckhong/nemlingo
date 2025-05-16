@@ -3,14 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <title>Nemlingo</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      width: 300px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    .container {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    h3 {
+      margin-top: 0;
+      color: #1a73e8;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+    #meaning {
+      margin: 12px 0;
+      line-height: 1.5;
+    }
+    audio {
+      width: 100%;
+      margin: 8px 0;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      padding-top: 8px;
+      border-top: 1px solid #eee;
+      font-size: 12px;
+      color: #666;
+    }
+    .view-saved {
+      color: #1a73e8;
+      text-decoration: none;
+      font-size: 12px;
+    }
+    .view-saved:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <h3 id="word">Loading...</h3>
     <div id="meaning"></div>
     <audio id="pronunciation" controls></audio>
-    <div class="footer">Nemlingo</div>
+    <div class="footer">
+      <span>Nemlingo</span>
+      <a href="saved.html" class="view-saved">View Saved Words</a>
+    </div>
   </div>
   <script src="popup.js"></script>
 </body>
